@@ -1,0 +1,15 @@
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../img/mosquitoJumbo.jpg);
+    background-position: 0% 77%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.15em 0.15em 0.15em;
+    height: 500px;
+}
+
+.jumboText{
+  font-family: 'Raleway', serif;
+  color: #ffffff;
+}
