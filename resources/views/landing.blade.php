@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
 <!--<![endif]-->
 
@@ -7,22 +7,22 @@
 <head>
 
     <!-- Scripting -->
-    <script src="public/js/vendor/bootstrap.min.js"></script>
-    <script src="public/js/main.js"></script>
-    <script src="public/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="public/css/main.css">
-    <link rel="stylesheet" href="public/css/navbar.css">
-    <link rel="stylesheet" href="public/css/jumbotron.css">
-    <link rel="stylesheet" href="public/css/social.css">
-    <link rel="stylesheet" href="public/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/jumbotron.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Fonts and icons -->
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Josefin+Sans|Raleway|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="public/css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
 
 
     <!-- Metas -->
