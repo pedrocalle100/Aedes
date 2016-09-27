@@ -157,9 +157,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-              <h1>Si están leyendo esto, github funciona correctamente</h1>
-            </div>
         </div>
     </div>
 
