@@ -58,7 +58,7 @@
                 <div class="container" id="containerSignup">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" class="signUpButton"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="#" class="signUpButton"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="ConsultaV2.php" class="signUpButton"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
                 </div>
                 <!-- End of Container Signup -->
