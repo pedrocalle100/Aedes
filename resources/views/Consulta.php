@@ -46,7 +46,11 @@ if (mysqli_connect_error()){
             .mysqli_real_escape_string($link, $_POST["Mirador y Altos de Niquia"])."','"
             .mysqli_real_escape_string($link, $_POST["Niquia"])."','"
             .mysqli_real_escape_string($link, $_POST["Fontidueno"])."','"
-            .mysqli_real_escape_string($link, $_POST["Acevedo"])."')";
+            .mysqli_real_escape_string($link, $_POST["Acevedo"])."')
+            AND Edad >= '"
+            .mysqli_real_escape_string($link, $_POST["edadInicial"])."'
+            AND Edad <= '"
+            .mysqli_real_escape_string($link, $_POST["edadFinal"])."'";
     
         if ($result = mysqli_query($link,$query)){
              ?> 
@@ -55,8 +59,9 @@ if (mysqli_connect_error()){
                 <thead>
                     <tr>
                         <th>Fecha</th>
-                        <th>Sexo</th>
+                        <th>Género</th>
                         <th>Comuna</th>
+                        <th>Edad</th>
                     
                     </tr>
                 </thead>
@@ -67,6 +72,7 @@ if (mysqli_connect_error()){
                     <td><?php echo $row['Fecha']; ?></td>
                     <td><?php echo $row['Sexo']; ?></td>
                     <td><?php echo $row['Comuna']; ?></td>
+                    <td><?php echo $row['Edad']; ?></td>
                 </tr>
     
     <?php    }?>
@@ -157,7 +163,7 @@ if (mysqli_connect_error()){
         
         <hr/>
           
-        <p>Cual Sexo</p>
+        <p>Cual Género</p>
         <fieldset class="form-check">
             <label class="form-check-inline">
   
@@ -225,17 +231,30 @@ if (mysqli_connect_error()){
          <p>Seleccione Rango(s) de edad:</p>     
         <fieldset class="form-check">
             
-            <label class="form-check-inline">
-            <input class="form-check-input" type="checkbox" id="0a5" value="0a5" name="0a5"> 0 a 5
-            </label>  
             
-            <label class="form-check-inline">
-            <input class="form-check-input" type="checkbox" id="6a10" value="6a10" name="6a10"> 6 a 10
-            </label>  
+                    <label class="form-check-inline">Edad Inicial</label>  
+            <div class="row">
+                <div class="col-xs-1">
+                    <input class="form-check-input" type="text" id="edadInicial" name="edadInicial"> 
+                      
+                </div>
+                
+            </div>
             
-            <label class="form-check-inline">    
-            <input class="form-check-input" type="checkbox" id="11a15" value="11a15" name="11a15"> 11 a 15
-            </label>  
+        </fieldset>
+        
+        <fieldset class="form-check">    
+            
+
+                    <label class="form-check-inline">Edad Final</label>  
+            <div class="row">
+                <div class="col-xs-1">
+                    <input class="form-check-input" type="text" id="edadFinal"  name="edadFinal"> 
+                    
+                    
+                </div>
+                
+            </div>
         
         </fieldset>   
         
