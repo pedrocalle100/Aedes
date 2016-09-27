@@ -228,43 +228,39 @@ if (mysqli_connect_error()){
           
         <hr/>
         
-         <p>Seleccione Rango(s) de edad:</p>     
-        <fieldset class="form-check">
-            
-            
-                    <label class="form-check-inline">Edad Inicial</label>  
-            <div class="row">
+        <p>Cuales Edades</p>   
+        
+         <fieldset class="form-group">
+             <div class="row">
                 <div class="col-xs-1">
-                    <input class="form-check-input" type="text" id="edadInicial" name="edadInicial"> 
-                      
+                    <label for="edadInicial">Edad Inicial</label>
+        
+                    <input type="text" class="form-control" id="edadInicial" name="edadInicial">
+                            
                 </div>
                 
             </div>
-            
+        
         </fieldset>
         
-        <fieldset class="form-check">    
-            
-
-                    <label class="form-check-inline">Edad Final</label>  
-            <div class="row">
+        <fieldset class="form-group">
+             <div class="row">
                 <div class="col-xs-1">
-                    <input class="form-check-input" type="text" id="edadFinal"  name="edadFinal"> 
-                    
-                    
+                    <label for="edadFinal">Edad Final</label>
+        
+                    <input type="text" class="form-control" id="edadFinal" name="edadFinal">
+                            
                 </div>
                 
             </div>
         
-        </fieldset>   
+        </fieldset>
         
           <hr/>
         
          <button type="submit" id="submit" class="btn btn-primary">Go!</button>
         
     </form>
-        
- 
             
     </div>
 
