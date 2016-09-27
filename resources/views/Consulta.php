@@ -29,8 +29,6 @@ if (mysqli_connect_error()){
     
     if ( $_POST['fechaInicial'] != ''){
         
-        echo "<table>";
-        
         $query = "SELECT * FROM `casos_dengue` WHERE 
             Fecha >= '"
             .mysqli_real_escape_string($link, $_POST["fechaInicial"])."'
@@ -51,12 +49,29 @@ if (mysqli_connect_error()){
             .mysqli_real_escape_string($link, $_POST["Acevedo"])."')";
     
         if ($result = mysqli_query($link,$query)){
+             ?> 
         
-            while($row = mysqli_fetch_array($result)){
-                    print_r($row);
-            
-            }   
-            
+                <table class="table table-striped table-inverse">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Sexo</th>
+                        <th>Comuna</th>
+                    
+                    </tr>
+                </thead>
+        
+            <?php while($row = mysqli_fetch_array($result)){ ?>
+                  
+                <tr>
+                    <td><?php echo $row['Fecha']; ?></td>
+                    <td><?php echo $row['Sexo']; ?></td>
+                    <td><?php echo $row['Comuna']; ?></td>
+                </tr>
+    
+    <?php    }?>
+                </table>
+    <?php        
         }
    
     }
@@ -117,7 +132,7 @@ if (mysqli_connect_error()){
         <fieldset class="form-group">
              <div class="row">
                 <div class="col-xs-3">
-                    <label for="fechaInicial">Fecha Inicial</label>
+                    <label for="fechaInicial">Desde Cuando</label>
         
                     <input type="date" class="form-control" id="fechaInicial" name="fechaInicial">
                            
@@ -130,7 +145,7 @@ if (mysqli_connect_error()){
         <fieldset class="form-group">
             <div class="row">
                 <div class="col-xs-3">
-                    <label for="fechaFinal">Fecha Final</label>
+                    <label for="fechaFinal">Hasta Cuando</label>
         
                     <input type="date" class="form-control" id="fechaFinal" name="fechaFinal">
                     
@@ -142,7 +157,7 @@ if (mysqli_connect_error()){
         
         <hr/>
           
-        <p>Sexo</p>
+        <p>Cual Sexo</p>
         <fieldset class="form-check">
             <label class="form-check-inline">
   
@@ -160,7 +175,7 @@ if (mysqli_connect_error()){
         
         <hr/>
         
-        <p>Seleccionar Comuna(s):</p>        
+        <p>Cual(es) Comuna(s):</p>        
         <fieldset class="form-check">
             <label class="form-check-inline">
   
@@ -229,6 +244,8 @@ if (mysqli_connect_error()){
          <button type="submit" id="submit" class="btn btn-primary">Go!</button>
         
     </form>
+        
+ 
             
     </div>
 
