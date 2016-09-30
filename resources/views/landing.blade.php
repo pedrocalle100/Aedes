@@ -144,11 +144,14 @@
         <!-- End of container -->
         <hr>
 
+        <div class="row">
         <div id="containerSocial" class="container">
+          <div class="col-md-12">
+            <div class="containerEafit">
+                <img class="infoIcon" id="logoEafit" src="img/eafit.png">
+            </div>
+          </div>
             <div class="col-md-12">
-                <div class="containerEafit">
-                    <img id="logoEafit" src="img/eafit.png"></img>
-                </div>
                 <div class="container" id="containerSocialButtons">
                     <div class="social-buttons">
                         <a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
@@ -159,6 +162,7 @@
             </div>
         </div>
     </div>
+  </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>

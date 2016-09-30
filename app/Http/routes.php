@@ -11,15 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('/landing', function(){
+Route::get('/', function(){
     return view('landing');
 });
 
 Route::get('/consulta', function(){
     return view('consulta');
 });
-
