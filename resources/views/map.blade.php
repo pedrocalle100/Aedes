@@ -7,11 +7,14 @@
     <script src="main/js/map.js"></script>
     <script src="bootstrap/js/vendor/bootstrap.min.js"></script>
     <script src="bootstrap/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.js'></script>
     <!--stylesheets-->
     <link rel="stylesheet" href="main/css/main.css">
+    <link rel="stylesheet" href="main/css/map.css">
     <link rel="stylesheet" href="main/css/navbar.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.css' rel='stylesheet' />
 
       <!--fonts & icons-->
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Josefin+Sans|Raleway|Roboto" rel="stylesheet">
@@ -19,8 +22,6 @@
     <link rel="stylesheet" href="main/css/font-awesome/css/font-awesome.css">
   </head>
   <body>
-
-    <div class="backgroundGradient">
 
 
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -52,6 +53,11 @@
         </div>
         <div class="row">
           <div class="container">
+            <h1 class="title"><i class="fa fa-plus-square fa-2x" aria-hidden="true"></i></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
             <div class="col-md-12">
               <h3 class="title">please upload a .csv excel file to update the map</h3>
             </div>
@@ -59,17 +65,22 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="container">
-          <div class="col-md-12">
-            <div id="map">
+      <br>
 
-            </div>
+      <div class="row">
+        <div class="container" id="containerMap">
+          <div class="col-md-12">
+          <div id='map'></div>
+          <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoicGNhbGxlaiIsImEiOiJjaXUyeXVzZncwaHJxMnlvMTQ5aDUydHdnIn0.YUt_W4yQduMhunMDUMkGgw';
+            var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/pcallej/ciu4udg6h00cv2ilfny4lp7jw'
+            });
+          </script>
           </div>
         </div>
       </div>
-
-    </div>
 
   </body>
 </html>

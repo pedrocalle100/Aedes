@@ -1,3 +1,14 @@
+html, body {
+  min-height: 100%;
+}
+body {
+  background: #92c7d6;
+  background-image: -webkit-radial-gradient(top, circle cover, #9de6dd, #427388 80%);
+  background-image: -moz-radial-gradient(top, circle cover, #9de6dd, #427388 80%);
+  background-image: -o-radial-gradient(top, circle cover, #9de6dd, #427388 80%);
+  background-image: radial-gradient(top, circle cover, #9de6dd, #427388 80%);
+}
+
 body{
   padding-top: 50px;
   color: #78909C;
@@ -11,13 +22,6 @@ hr{
     margin: 1em 0;
     padding: 0;
 }
-
-.backgroundGradient {
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(#ecfefe, #e4ffff);
-  box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
- }
 
  .title{
    font-family: 'Raleway';

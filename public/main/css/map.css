@@ -1,5 +1,9 @@
+#containerMap{
+  height: 80%;
+  width: 80%;
+}
+
 #map{
-  position: absolute;
   width: 500px;
   height: 500px;
 }
