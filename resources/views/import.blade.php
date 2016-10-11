@@ -18,6 +18,7 @@ if (isset($_POST['submit'])){
 
             $filename = $_FILES['file']['tmp_name'];
             $handle = fopen($filename, "r");
+            fgets($handle);
 
             while($data = fgetcsv($handle)){
 
