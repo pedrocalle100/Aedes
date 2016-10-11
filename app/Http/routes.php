@@ -19,6 +19,6 @@ Route::get('/', function(){
     return view('landing');
 });
 
-Route::get('/consulta', function(){
-    return view('consulta');
+Route::get('/map', function(){
+  return view('map');
 });

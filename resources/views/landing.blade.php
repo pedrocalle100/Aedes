@@ -7,22 +7,22 @@
 <head>
 
     <!-- Scripting -->
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="landing/js/main.js"></script>
+    <script src="bootstrap/js/vendor/bootstrap.min.js"></script>
+    <script src="bootstrap/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/jumbotron.css">
-    <link rel="stylesheet" href="css/social.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="landing/css/main.css">
+    <link rel="stylesheet" href="landing/css/navbar.css">
+    <link rel="stylesheet" href="landing/css/jumbotron.css">
+    <link rel="stylesheet" href="landing/css/social.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
     <!-- Fonts and icons -->
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Josefin+Sans|Raleway|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="landing/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="landing/css/font-awesome/css/font-awesome.css">
 
 
     <!-- Metas -->
@@ -57,8 +57,8 @@
                 <!-- Container Sign Up -->
                 <div class="container" id="containerSignup">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="signUpButton"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="consulta.php" class="signUpButton"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#" class="signUpButton">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="map" class="signUpButton">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
                 <!-- End of Container Signup -->
@@ -90,7 +90,7 @@
         <div class="container" id="containerInfo">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="infoIcon" src="img/virus.png">
+                    <img class="infoIcon" src="landing/img/virus.png">
                     <h2 class="infoTitle">
                       Lorem ipsum dolor
                     </h2>
@@ -107,7 +107,7 @@
                     <!-- End of column-->
                 </div>
                 <div class="col-md-4">
-                    <img class="infoIcon" src="img/hospital.png">
+                    <img class="infoIcon" src="landing/img/hospital.png">
                     <h2 class="infoTitle">
                       Lorem ipsum dolor
                     </h2>
@@ -123,7 +123,7 @@
                     <!-- End of column-->
                 </div>
                 <div class="col-md-4">
-                    <img class="infoIcon" src="img/mosquito.png">
+                    <img class="infoIcon" src="landing/img/mosquito.png">
                     <h2 class="infoTitle">
                       Lorem ipsum dolor
                     </h2>
@@ -144,24 +144,26 @@
         <!-- End of container -->
         <hr>
 
-        <div class="row">
-        <div id="containerSocial" class="container">
-          <div class="col-md-12">
-            <div class="containerEafit">
-                <img class="infoIcon" id="logoEafit" src="img/eafit.png">
+        <div class="container-fluid">
+          <div class="row">
+            <div id="containerSocial" class="container">
+              <div class="col-md-12">
+                <div class="containerEafit">
+                  <img class="infoIcon" id="logoEafit" src="landing/img/eafit.png">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="container" id="containerSocialButtons">
+                  <div class="social-buttons">
+                    <a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="social-button google"><i class="fa fa-google"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-            <div class="col-md-12">
-                <div class="container" id="containerSocialButtons">
-                    <div class="social-buttons">
-                        <a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="social-button google"><i class="fa fa-google"></i></a>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
   </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
