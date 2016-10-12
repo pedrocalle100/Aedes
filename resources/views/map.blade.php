@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>main</title>
     <!-- scripting -->
-    <script src="main/js/map.js"></script>
+    <script src="main/js/maptooltip.js"></script>
     <script src="bootstrap/js/vendor/bootstrap.min.js"></script>
     <script src="bootstrap/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.js'></script>
@@ -67,7 +67,7 @@
 
       <br>
 
-      <div class="row">
+      <!--<div class="row">
         <div class="container" id="containerMap">
           <div class="col-md-12">
           <div id='map'></div>
@@ -80,7 +80,187 @@
           </script>
           </div>
         </div>
-      </div>
+      </div>-->
+
+      <style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+    </style>
+    <div id='map'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGNhbGxlaiIsImEiOiJjaXUyeXVzZncwaHJxMnlvMTQ5aDUydHdnIn0.YUt_W4yQduMhunMDUMkGgw';
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/pcallej/ciu4udg6h00cv2ilfny4lp7jw',
+      //center: [-77.04, 38.907],
+      //zoom: 11.15
+    });
+
+    map.on('load', function () {
+      // Add a GeoJSON source containing place coordinates and information.
+      map.addSource("pins", {
+          "type": "geojson",
+          "data": {
+              "type": "FeatureCollection",
+              "features": [
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>Paris</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.581107,6.312885],
+                    "type": "Point"
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>La Gabriela</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.55313,6.312894],
+                    "type": "Point"
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>La Florida</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.559876,6.317818],
+                    "type": "Point"
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>Salento</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.566265,6.325389],
+                    "type": "Point"
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>Bello</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.558773,6.334078],
+                    "type": "Point"
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>La Cumbre</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.567551,6.341713],
+                    "type": "Point"
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>Bellavista</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.564347,6.348994],
+                    "type": "Point"
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>Altos de Niquía</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.554351,6.345808],
+                    "type": "Point"
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>Niquía</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.550383,6.340348],
+                    "type": "Point"
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description": "<strong>Fontidueño</strong>",
+                    "icon": "marker-15"
+                  },
+                  "geometry": {
+                    "coordinates": [-75.543058,6.330186],
+                    "type": "Point"
+                  }
+                }
+            ]
+        }
+    });
+
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "pins",
+        "type": "symbol",
+        "source": "pins",
+        "layout": {
+            "icon-image": "marker-15",
+            "icon-allow-overlap": true
+        }
+    });
+});
+
+
+// When a click event occurs near a place, open a popup at the location of
+// the feature, with description HTML from its properties.
+map.on('click', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['pins'] });
+
+    if (!features.length) {
+        return;
+    }
+
+    var feature = features[0];
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.description)
+        .addTo(map);
+});
+
+// Use the same approach as above to indicate that the symbols are clickable
+// by changing the cursor style to 'pointer'.
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['pins'] });
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+});
+</script>
+
+      <br>
 
   </body>
 </html>
