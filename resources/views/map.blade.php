@@ -23,7 +23,7 @@
   </head>
   <body>
 
-
+      <!-- Navbar -->
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -44,26 +44,29 @@
           </div>
         </div>
       </nav>
+      <!-- End of Navbar -->
 
+      <!--Instructions -->
       <div class="row">
         <div class="container">
           <div class="col-md-12">
+            <h1 class="title"><img src="main/img/mosquito.png" alt="logo" style="width:10%","height:10%"/></i></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
             <h1 class="title"> Information map </h1>
           </div>
         </div>
         <div class="row">
           <div class="container">
-            <h1 class="title"><i class="fa fa-plus-square fa-2x" aria-hidden="true"></i></h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="container">
             <div class="col-md-12">
-              <h3 class="title">please upload a .csv excel file to update the map</h3>
+              <h4 class="title">Please upload a .csv excel file to update the map</h4>
             </div>
           </div>
         </div>
       </div>
+      <!-- End of Instructions -->
 
       <br>
 
@@ -82,7 +85,7 @@
         </div>
       </div>-->
 
-      <style>
+    <style>
     .mapboxgl-popup {
         max-width: 400px;
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
