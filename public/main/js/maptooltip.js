@@ -16,6 +16,7 @@ map.on('click', function displayTooltip(e) {
   var popup = new mapboxgl.Popup()
   .setLngLat(feature.geometry.coordinates)
   .setHTML(feature.properties.description)
+  .setHTML(feature.properties.numcasos)
   .addTo(map);
 });
 

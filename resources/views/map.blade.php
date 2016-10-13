@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>main</title>
     <!-- scripting -->
-    <script src="main/js/maptooltip.js"></script>
+    <!--<script src="main/js/maptooltip.js"></script>-->
     <script src="bootstrap/js/vendor/bootstrap.min.js"></script>
     <script src="bootstrap/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.js'></script>
@@ -112,7 +112,7 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Paris</strong>",
+                    "description": "<strong>Nombre: </stong><strong>Paris</strong> <br> <p>Numero de casos: 8</p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -123,7 +123,7 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>La Gabriela</strong>",
+                    "description": "<strong>Acebedo</strong>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -134,7 +134,7 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>La Florida</strong>",
+                    "description": "<strong>Madera</strong>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -145,7 +145,7 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Salento</strong>",
+                    "description": "<strong>Santa Ana</strong>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -156,7 +156,7 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Bello</strong>",
+                    "description": "<strong>Centro</strong>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -264,6 +264,13 @@ map.on('mousemove', function (e) {
 </script>
 
       <br>
+
+
+      <div class="row">
+        <div class="col-md-12">
+
+        </div>
+      </div>
 
   </body>
 </html>
