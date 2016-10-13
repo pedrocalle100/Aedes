@@ -16,6 +16,7 @@ if (isset($_POST['submit'])){
 
         if(strtolower(end($chk_ext)) == "csv"){
 
+            $i = 2;
             $filename = $_FILES['file']['tmp_name'];
             $handle = fopen($filename, "r");
             fgets($handle);
@@ -27,17 +28,12 @@ if (isset($_POST['submit'])){
               cada item representa cada columna del archivo CSV (Excel) para la
               base de datos
               */
-                if ($data[0] == Null){
-                    continue   
-                }else{
-                $item1 = mysqli_real_escape_string($link, $data[0]);
-                }
                 
-                if  ($data[1] == Null){
-                    continue
-                }else{
+                  
+                $item1 = mysqli_real_escape_string($link, $data[0]);
+                
                 $item2 = mysqli_real_escape_string($link, $data[1]);
-                }
+                
                 /*
                 $item3 = mysqli_real_escape_string($link, $data[2]);
                 $item4 = mysqli_real_escape_string($link, $data[3]);
@@ -86,10 +82,18 @@ if (isset($_POST['submit'])){
                 $item47 = mysqli_real_escape_string($link, $data[46]);
                 $item48 = mysqli_real_escape_string($link, $data[47]);
                 */
+                
+                if ($data[0] == NULL or $data[3] == NULL or $data[4] == NULL or $data[5] = NULL ){
+                     echo "<br>No se pudo importar la linea ".$i." con los datos: ".$item1." ".$item2." ".$item3." ".$item4." ".$item5" ".$item6." ".$item7." ".$item8." ".$item9." ".$item10." ".$item11." ".$item12." ".$item13." ".$item14." ".$item15." ".$item16." ".$item17." ".$item18." ".$item19." ".$item20." ".$item21." ".$item22." ".$item23." ".$item24." ".$item25." ".$item26." ".$item27." ".$item28." ".$item29." ".$item30." ".$item31." ".$item32." ".$item33." ".$item34." ".$item35." ".$item36." ".$item37." ".$item38." ".$item39." ".$item40." ".$item41." ".$item42." ".$item43." ".$item44." ".$item45." ".$item46." ".$item47." ".$item48;
+                    $i++;
+                    continue;
+                }
 
                 $sql = "INSERT INTO `test`(nombre, email) VALUES ('$item1','$item2')";
 
                 mysqli_query($link, $sql);
+                
+                $i++;
             }
             fclose($handle);
             echo "Succesfuly Imported";
@@ -105,13 +109,13 @@ if (isset($_POST['submit'])){
 
 <html>
     <head>
-        <title>asdfgbdas</title>
+        <title>Importar archivo Excel</title>
     </head>
 
     <body>
 
         <form method="post" enctype="multipart/form-data">
-            <p>Upload CSV: <input type="file" name="file"></p>
+            <p>Cargar Archivo CSV: <input type="file" name="file"></p>
             <p><input type="submit" name="submit" value="import"></p>
 
         </form>
