@@ -22,15 +22,22 @@ if (isset($_POST['submit'])){
 
             while($data = fgetcsv($handle)){
 
-
+                
               /*
               cada item representa cada columna del archivo CSV (Excel) para la
               base de datos
               */
-
+                if ($data[0] == Null){
+                    continue   
+                }else{
                 $item1 = mysqli_real_escape_string($link, $data[0]);
+                }
+                
+                if  ($data[1] == Null){
+                    continue
+                }else{
                 $item2 = mysqli_real_escape_string($link, $data[1]);
-
+                }
                 /*
                 $item3 = mysqli_real_escape_string($link, $data[2]);
                 $item4 = mysqli_real_escape_string($link, $data[3]);
