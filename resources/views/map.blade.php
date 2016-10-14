@@ -10,6 +10,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.js'></script>
     <!--stylesheets-->
     <link rel="stylesheet" href="main/css/main.css">
+    <link rel="stylesheet" href="main/css/button.css">
     <link rel="stylesheet" href="main/css/map.css">
     <link rel="stylesheet" href="main/css/navbar.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
@@ -267,8 +268,10 @@ map.on('mousemove', function (e) {
 
 
       <div class="row">
-        <div class="col-md-12">
-
+        <div class="container">
+          <div class="col-md-12">
+            <a href="" class="button-3d"><p id= "buttonText">Upload Excel</p></a>
+          </div>
         </div>
       </div>
 
