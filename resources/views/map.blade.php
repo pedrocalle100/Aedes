@@ -1,3 +1,13 @@
+<?php
+
+$link = mysqli_connect("127.0.0.1","cl49-aedes","Bm9W-sc4e","cl49-aedes");
+
+if (mysqli_connect_error()){
+
+    die("There was an error connecting to the database");
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -113,7 +123,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Nombre: </stong><strong>Paris</strong> <br> <p>Numero de casos: 8</p>",
+                    "description": "<strong>Nombre: </stong><strong>Paris</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'PARIS'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -124,7 +141,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Acebedo</strong>",
+                    "description": "<strong>Acevedo</strong><br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'ACEVEDO'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -135,7 +159,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Madera</strong>",
+                    "description": "<strong>Madera</strong><br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'MADERA'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -146,7 +177,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Santa Ana</strong>",
+                    "description": "<strong>Santa Ana</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'SANTA ANA'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -157,7 +195,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Centro</strong>",
+                    "description": "<strong>Centro</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'CENTRO'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -168,7 +213,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>La Cumbre</strong>",
+                    "description": "<strong>La Cumbre</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'LA CUMBRE'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -179,7 +231,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Bellavista</strong>",
+                    "description": "<strong>Bellavista</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'BELLAVISTA'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -190,7 +249,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Altos de Niquía</strong>",
+                    "description": "<strong>Altos de Niquía</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'ALTOS DE NIQUIA'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -201,7 +267,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Niquía</strong>",
+                    "description": "<strong>Niquía</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'NIQUIA'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -212,7 +285,14 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Fontidueño</strong>",
+                    "description": "<strong>Fontidueño</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'FONTIDUENO'";
+                      $result = mysqli_query($link, $query);
+        
+                      $row = mysqli_fetch_array($result);
+                      
+                   echo $row[0];
+                    
+                    ?></p>",
                     "icon": "marker-15"
                   },
                   "geometry": {
