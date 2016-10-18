@@ -20,6 +20,37 @@ if (isset($_POST['submit'])){
             $filename = $_FILES['file']['tmp_name'];
             $handle = fopen($filename, "r");
             fgets($handle);
+            
+             $paris = array('LOS SAUCES', 'LA PRADERA', 'PARIS CENTRAL', 'JOSE ANTONIO GALAN', 'CAMPO GRANDE','TIERRA VERDE', 'EL CAFETAL', 'LA ESMERALDA', 'LA MARUCHENGA', 'SALVADOR ALLENDE');
+
+                $madera = array('BARRIO NUEVO', 'CABANITAS', 'LA CABANA', 'LA MADERA', 'LA FLORIDA', 'GRAN AVENIDA', 'SAN JOSE OBRERO', 'AMAZONIA');
+
+                $santaAna = array('VILLAS DE OCCIDENTE', 'MOLINARES', 'SAN SIMON', 'SANTA ANA', 'LOS BUCAROS', 'SALENTO', 'SERRAMONTE',
+                'PALMAR DE SERRAMONTE', 'SAN SILVESTRE');
+
+                $centro = array('SUAREZ', 'PUERTO BELLO', 'RINCON SANTON', 'CENTRAL',
+                'ESPIRITU SANTO', 'ZONA CENTRO', 'PEREZ', 'NAZARET', 'EL ROSARIO', 'ANDA LUCIA', 'LOPEZ DE MESA','EL CAIRO', 'LA MILAGROSA', 'EL CONGOLO', 'LAS GRANJAS', 'PRADO', 'MANCHESTER', 'LA ESTACION');
+
+                $cumbre = array('LA CUMBRE', 'ALTAVISTA', 'EL CARMELO', 'HATO VIEJO', 'EL PORVENIR', 'BRICENO', 'BUENOS AIRES',
+                'EL PARAISO', 'VALADARES', 'EL TRAPICHE', 'ARALIAS', 'URAPANES', 'LA PRIMAVERA', 'VILLA MARIA', 'VILLAS DE COMFENALCO', 'RIACHUELOS');
+
+                $bellaVista = array('BELLAVISTA', 'PLAYA RICA', 'SAN GABRIEL', 'SAN MARTIN',
+                'VILLAS DEL SOL', 'TIERRADENTRO', 'VILLA LINDA', 'GIRASOLES', 'LA SONORA', 'VILLA LUNA', 'PACHELLY', 'LOS ALPES', 'EL DUCADO', 'LA ALDEA', 'LA SELVA');
+
+                $alNiquia = array('ALTOS DE NIQUIA', 'NIQUIA BIFAMILARES',
+                'EL MIRADOR QUITASOL');
+
+                $niquia = array('TERRANOVA', 'NIQUIA PANAMERICANO', 'CIUDAD DEL NORTE', 'HERMOSA PROVINCIA',
+                'LA NAVARRA', 'EL TREVOL', 'GUASIMALITO');
+
+                $fontidueno = array('LA VIRGINIA', 'FONTIDUENO', 'LA MINA', 'ALCALA',
+                'LOS CIRUELOS', 'ESTACION PRIMERA', 'LAS VEGAS', 'LA CAMILA', 'CINCO ESTRELLAS', 'JARDIN DE LOS SUEÑOS',
+                'MARCO FIDEL SUARESZ');
+
+                $acevedo = array('LA GABRIELA','BELVEDERE', 'ACEVEDO', 'ZAMORA', 'ALPES DEL NORTE',
+                'MIRADOR DE SAN NICOLAS', 'SANTA RITA');
+
+                $croacia = array('EL PINAR', 'ADOLFO PAZ','REGALO DE DIOS','EL SIETE');
 
             while($data = fgetcsv($handle)){
 
@@ -109,42 +140,7 @@ if (isset($_POST['submit'])){
                 $item52 = mysqli_real_escape_string($link, $data[51]);
                 $item53 = mysqli_real_escape_string($link, $data[52]);
 
-                $paris = array('LOS SAUCES', 'LA PRADERA', 'PARIS CENTRAL', 'JOSE ANTONIO GALAN', 'CAMPO GRANDE',
-                'TIERRA VERDE', 'EL CAFETAL', 'LA ESMERALDA', 'LA MARUCHENGA', 'SALVADOR ALLENDE');
-
-                $madera = array(,'BARRIO NUEVO', 'CABANITAS', 'LA CABANA', 'LA MADERA', 'LA FLORIDA', 'GRAN AVENIDA', 'SAN JOSE OBRERO', 'AMAZONIA');
-
-                $santaAna = array('VILLAS DE OCCIDENTE', 'MOLINARES', 'SAN SIMON', 'SANTA ANA', 'LOS BUCAROS', 'SALENTO', 'SERRAMONTE',
-                'PALMAR DE SERRAMONTE', 'SAN SILVESTRE');
-
-                $centro = array('SUAREZ', 'PUERTO BELLO', 'RINCON SANTON', 'CENTRAL',
-                'ESPIRITU SANTO', 'ZONA CENTRO', 'PEREZ', 'NAZARET', 'EL ROSARIO', 'ANDA LUCIA', 'LOPEZ DE MESA',
-                'EL CAIRO', 'LA MILAGROSA', 'EL CONGOLO', 'LAS GRANJAS', 'PRADO', 'MANCHESTER', 'LA ESTACION');
-
-                $cumbre = array('LA CUMBRE', 'ALTAVISTA', 'EL CARMELO', 'HATO VIEJO', 'EL PORVENIR', 'BRICENO', 'BUENOS AIRES',
-                'EL PARAISO', 'VALADARES', 'EL TRAPICHE', 'ARALIAS', 'URAPANES', 'LA PRIMAVERA', 'VILLA MARIA',
-                'VILLAS DE COMFENALCO', 'RIACHUELOS');
-
-                $bellaVista = array('BELLAVISTA', 'PLAYA RICA', 'SAN GABRIEL', 'SAN MARTIN',
-                'VILLAS DEL SOL', 'TIERRADENTRO', 'VILLA LINDA', 'GIRASOLES', 'LA SONORA', 'VILLA LUNA', 'PACHELLY',
-                'LOS ALPES', 'EL DUCADO', 'LA ALDEA', 'LA SELVA');
-
-                $alNiquia = array('ALTOS DE NIQUIA', 'NIQUIA BIFAMILARES',
-                'EL MIRADOR QUITASOL');
-
-                $niquia = array('TERRANOVA', 'NIQUIA PANAMERICANO', 'CIUDAD DEL NORTE', 'HERMOSA PROVINCIA',
-                'LA NAVARRA', 'EL TREVOL', 'GUASIMALITO');
-
-                $fontidueno = array('LA VIRGINIA', 'FONTIDUENO', 'LA MINA', 'ALCALA',
-                'LOS CIRUELOS', 'ESTACION PRIMERA', 'LAS VEGAS', 'LA CAMILA', 'CINCO ESTRELLAS', 'JARDIN DE LOS SUEÑOS',
-                'MARCO FIDEL SUARESZ');
-
-                $acevedo = array('LA GABRIELA','BELVEDERE', 'ACEVEDO', 'ZAMORA', 'ALPES DEL NORTE',
-                'MIRADOR DE SAN NICOLAS', 'SANTA RITA');
-
-                $croacia = array('EL PINAR', 'ADOLFO PAZ','REGALO DE DIOS','EL SIETE');
-
-                  if(in_array($data[16], $paris)){
+                if(in_array($data[16], $paris)){
                     $comuna = "PARIS";
                   }else {
 
