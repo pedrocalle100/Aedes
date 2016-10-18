@@ -124,7 +124,7 @@
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Acebedo</strong>",
+                    "description": "<strong>Acevedo</strong>",
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -219,6 +219,18 @@
                     "coordinates": [-75.543058,6.330186],
                     "type": "Point"
                   }
+                },
+
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "description" : "<strong>No referenciados</strong>",
+                    "icon": "marker-15",
+                  },
+                  "geometry":{
+                    "coordinates": [ -75.564347,6.305006],
+                    "type": "Point"
+                  }
                 }
             ]
         }
@@ -270,7 +282,7 @@ map.on('mousemove', function (e) {
       <div class="row">
         <div class="container">
           <div class="col-md-12">
-            <a href="" class="button-3d"><p id= "buttonText">Upload Excel</p></a>
+            <a href="" class="button-3d"><h4 id= "buttonText">Upload Excel</h4></a>
           </div>
         </div>
       </div>

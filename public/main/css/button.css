@@ -4,8 +4,7 @@
   width: auto;
   display:inline-block;
   color:#ecf0f1;
-  text-decoration:none;
-  font-family: 'Raleway'
+  text-decoration: none;
   border-radius:5px;
   border:solid 1px #317d31;
   background:#317d31;
@@ -34,4 +33,14 @@
 
 #buttonText{
   font-family: 'Raleway';
+}
+
+#buttonText:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.button-3d:hover, .button-3d:focus{
+  color: white;
+  text-decoration: none;
 }
