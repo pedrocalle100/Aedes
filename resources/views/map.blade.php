@@ -1367,7 +1367,7 @@ map.addSource('AltosNiquia', {
     }
   }
 });
-        
+
 //FINAL DE POLIGONOS DE LA COMUNA ALTOS NIQUIA
 
 //POLIGONOS DE LA COMUNA LA CUMBRE
@@ -1679,7 +1679,7 @@ map.addSource('La Cumbre', {
 [-75.5725050275,6.35368802997]]]
     }
   }
-});        
+});
 
 //FINAL DE POLIGONOS DE LA COMUNA NIQUIA
 
@@ -2549,7 +2549,7 @@ map.addSource('Centro', {
         "fill-opacity": 0.8
       }
     });
-        
+
     map.addLayer({
       "id": "La Cumbre",
       "type": "fill",
@@ -2559,7 +2559,7 @@ map.addSource('Centro', {
         "fill-color": "#088",
         "fill-opacity": 0.8
       }
-    });    
+    });
 
     map.addLayer({
       "id": "Acevedo",
@@ -2698,6 +2698,21 @@ map.on('mousemove', function (e) {
           <div class="container">
             <ul>
               <h4 class="title">Cargue el archivho de excel con las columnas indicadas por el ministerio de salud</h4>
+            </ul>
+            <ul>
+              <h4 class="title">El archivo debe de ser .csv</h4>
+            </ul>
+            <ul>
+              <h4 class="title">El menor nivel de peligro es verde</h4>
+            </ul>
+            <ul>
+              <h4 class="title">El siguiente nivel de peligro es amarillo</h4>
+            </ul>
+            <ul>
+              <h4 class="title">El medio nivel de peligro es naranja</h4>
+            </ul>
+            <ul>
+              <h4 class="title">El mayor nivel de peligro es rojo</h4>
             </ul>
           </div>
         </div>
