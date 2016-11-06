@@ -2681,15 +2681,6 @@ map.on('mousemove', function (e) {
       <br>
 
 
-      <!--<div class="row">
-        <div class="container">
-          <div class="col-md-12">
-            <a href="" class="button-3d"><h4 id= "buttonText">Upload Excel</h4></a>
-          </div>
-        </div>
-      </div>-->
-
-
       <div class="row">
         <div class="col-md-12">
           <div class="container">
