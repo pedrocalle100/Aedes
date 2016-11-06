@@ -2320,7 +2320,7 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Nombre: </stong><strong>Paris</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'PARIS'";
+                    "description": "<strong>Nombre: </stong><strong>Paris</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'PARIS'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2340,7 +2340,7 @@ map.addSource('Centro', {
                   "properties": {
                     "description": "<strong>Acevedo</strong>",
 
-                    "description": "<strong>Acevedo</strong><br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'ACEVEDO'";
+                    "description": "<strong>Acevedo</strong><br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'ACEVEDO'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2359,7 +2359,7 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Madera</strong><br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'MADERA'";
+                    "description": "<strong>Madera</strong><br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'MADERA'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2377,7 +2377,7 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Santa Ana</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'SANTA ANA'";
+                    "description": "<strong>Santa Ana</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'SANTA ANA'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2395,7 +2395,7 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Centro</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'CENTRO'";
+                    "description": "<strong>Centro</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'CENTRO'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2413,7 +2413,7 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>La Cumbre</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'LA CUMBRE'";
+                    "description": "<strong>La Cumbre</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'LA CUMBRE'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2431,7 +2431,7 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Bellavista</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'BELLAVISTA'";
+                    "description": "<strong>Bellavista</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'BELLAVISTA'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2449,7 +2449,7 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Altos de Niquía</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'ALTOS DE NIQUIA'";
+                    "description": "<strong>Altos de Niquía</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'ALTOS DE NIQUIA'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2467,7 +2467,7 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Niquía</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'NIQUIA'";
+                    "description": "<strong>Niquía</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'NIQUIA'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2485,7 +2485,7 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Fontidueño</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(cod_eve) FROM `casos` WHERE comuna = 'FONTIDUENO'";
+                    "description": "<strong>Fontidueño</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'FONTIDUENO'";
                       $result = mysqli_query($link, $query);
 
                       $row = mysqli_fetch_array($result);
@@ -2545,7 +2545,7 @@ map.addSource('Centro', {
       "source": "Paris",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#ffd700",
         "fill-opacity": 0.8
       }
     });
@@ -2556,7 +2556,7 @@ map.addSource('Centro', {
       "source": "La Cumbre",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#33AB28",
         "fill-opacity": 0.8
       }
     });
@@ -2567,7 +2567,7 @@ map.addSource('Centro', {
       "source": "Acevedo",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#008000",
         "fill-opacity": 0.8
       }
     });
@@ -2578,7 +2578,7 @@ map.addSource('Centro', {
       "source": "Fontidueno",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#ffa500",
         "fill-opacity": 0.8
       }
     });
@@ -2589,7 +2589,7 @@ map.addSource('Centro', {
       "source": "Madera",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#ffd700",
         "fill-opacity": 0.8
       }
     });
@@ -2600,7 +2600,7 @@ map.addSource('Centro', {
       "source": "Niquia",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#ffd700",
         "fill-opacity": 0.8
       }
     });
@@ -2611,7 +2611,7 @@ map.addSource('Centro', {
       "source": "AltosNiquia",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#ffd700",
         "fill-opacity": 0.8
       }
     });
@@ -2622,7 +2622,7 @@ map.addSource('Centro', {
       "source": "Bellavista",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#ffa500",
         "fill-opacity": 0.8
       }
     });
@@ -2633,7 +2633,7 @@ map.addSource('Centro', {
       "source": "Centro",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#ff0000",
         "fill-opacity": 0.8
       }
     });
@@ -2644,7 +2644,7 @@ map.addSource('Centro', {
       "source": "SantaAna",
       "layout": {},
       "paint": {
-        "fill-color": "#088",
+        "fill-color": "#ff0000",
         "fill-opacity": 0.8
       }
     });
