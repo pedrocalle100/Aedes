@@ -69,13 +69,6 @@ if (mysqli_connect_error()){
             <h1 class="title"> Information map </h1>
           </div>
         </div>
-        <div class="row">
-          <div class="container">
-            <div class="col-md-12">
-              <h4 class="title">Please upload a .csv excel file to update the map Hola mundo</h4>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- End of Instructions -->
 
@@ -2220,7 +2213,7 @@ map.addSource('Centro', {
 
 
 
-    
+
 
     // Add a layer showing the places.
     map.addLayer({
@@ -2364,10 +2357,24 @@ map.on('mousemove', function (e) {
       <br>
 
 
-      <div class="row">
+      <!--<div class="row">
         <div class="container">
           <div class="col-md-12">
             <a href="" class="button-3d"><h4 id= "buttonText">Upload Excel</h4></a>
+          </div>
+        </div>
+      </div>-->
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="container">
+            <h1 class="title">Instrucciones de uso:</h1>
+          </div>
+          <div class="container">
+            <ul>
+              <h4 class="title">Cargue el archivho de excel con las columnas indicadas por el ministerio de salud</h4>
+            </ul>
           </div>
         </div>
       </div>
