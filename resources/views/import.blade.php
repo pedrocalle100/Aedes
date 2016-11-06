@@ -21,9 +21,9 @@ if (isset($_POST['submit'])){
             $handle = fopen($filename, "r");
             fgets($handle);
             
-                $paris = array('LOS SAUCES', 'LA PRADERA', 'PARIS CENTRAL', 'JOSE ANTONIO GALAN', 'CAMPO GRANDE','TIERRA VERDE', 'EL CAFETAL', 'LA ESMERALDA', 'LA MARUCHENGA', 'SALVADOR ALLENDE');
+                $paris = array('PARIS','LOS SAUCES', 'LA PRADERA', 'PARIS CENTRAL', 'JOSE ANTONIO GALAN', 'CAMPO GRANDE','TIERRA VERDE', 'EL CAFETAL', 'LA ESMERALDA', 'LA MARUCHENGA', 'SALVADOR ALLENDE');
 
-                $madera = array('BARRIO NUEVO', 'CABANITAS', 'LA CABANA', 'LA MADERA', 'LA FLORIDA', 'GRAN AVENIDA', 'SAN JOSE OBRERO', 'AMAZONIA');
+                $madera = array('MADERA','BARRIO NUEVO', 'CABANITAS', 'LA CABANA', 'LA MADERA', 'LA FLORIDA', 'GRAN AVENIDA', 'SAN JOSE OBRERO', 'AMAZONIA');
 
                 $santaAna = array('VILLAS DE OCCIDENTE', 'MOLINARES', 'SAN SIMON', 'SANTA ANA', 'LOS BUCAROS', 'SALENTO', 'SERRAMONTE',
                 'PALMAR DE SERRAMONTE', 'SAN SILVESTRE');
@@ -40,10 +40,10 @@ if (isset($_POST['submit'])){
                 $alNiquia = array('ALTOS DE NIQUIA', 'NIQUIA BIFAMILARES',
                 'EL MIRADOR QUITASOL');
 
-                $niquia = array('TERRANOVA', 'NIQUIA PANAMERICANO', 'CIUDAD DEL NORTE', 'HERMOSA PROVINCIA',
+                $niquia = array('NIQUIA','TERRANOVA', 'NIQUIA PANAMERICANO', 'CIUDAD DEL NORTE', 'HERMOSA PROVINCIA',
                 'LA NAVARRA', 'EL TREVOL', 'GUASIMALITO');
 
-                $fontidueno = array('LA VIRGINIA', 'FONTIDUENO', 'LA MINA', 'ALCALA',
+                $fontidueno = array('FONTIDUENO','LA VIRGINIA', 'FONTIDUENO', 'LA MINA', 'ALCALA',
                 'LOS CIRUELOS', 'ESTACION PRIMERA', 'LAS VEGAS', 'LA CAMILA', 'CINCO ESTRELLAS', 'JARDIN DE LOS SUEÑOS',
                 'MARCO FIDEL SUARESZ');
 
@@ -296,47 +296,47 @@ if (isset($_POST['submit'])){
                 $item100 = mysqli_real_escape_string($link, $data[99]);
                 
 */
-                if(in_array($data[16], $paris)){
+                if(in_array($data[22], $paris)){
                     $comuna = "PARIS";
                   }else {
 
-                      if(in_array($data[16], $madera)){
+                      if(in_array($data[22], $madera)){
                         $comuna = "MADERA";
                       }else {
 
-                        if(in_array($data[16], $santaAna)){
+                        if(in_array($data[22], $santaAna)){
                           $comuna = "SANTA ANA";
                         }else {
 
-                          if(in_array($data[16], $centro)){
+                          if(in_array($data[22], $centro)){
                             $comuna = "CENTRO";
                           }else {
 
-                            if(in_array($data[16], $cumbre)){
+                            if(in_array($data[22], $cumbre)){
                               $comuna = "LA CUMBRE";
                             }else {
 
-                              if(in_array($data[16], $bellaVista)){
+                              if(in_array($data[22], $bellaVista)){
                                 $comuna = "BELLAVISTA";
                               }else {
 
-                                if(in_array($data[16], $alNiquia)){
+                                if(in_array($data[22], $alNiquia)){
                                   $comuna = "ALTOS DE NIQUIA";
                                 }else {
 
-                                  if(in_array($data[16], $niquia)){
+                                  if(in_array($data[22], $niquia)){
                                     $comuna = "NIQUIA";
                                   }else {
 
-                                    if(in_array($data[16], $fontidueno)){
+                                    if(in_array($data[22], $fontidueno)){
                                       $comuna = "FORTIDUENO";
                                     }else {
 
-                                      if(in_array($data[16], $acevedo)){
+                                      if(in_array($data[22], $acevedo)){
                                         $comuna = "ACEVEDO";
                                       }else {
 
-                                        if(in_array($data[16], $croacia)){
+                                        if(in_array($data[22], $croacia)){
                                           $comuna = "CROACIA";
                                         }else {
                                           $comuna = "BELLO";
