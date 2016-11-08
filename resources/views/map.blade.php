@@ -2644,7 +2644,7 @@ map.addSource('Centro', {
       "source": "SantaAna",
       "layout": {},
       "paint": {
-        "fill-color": "#F44336",
+        "fill-color": "#F44336",//cambiar color
         "fill-opacity": 0.55
       }
     });
@@ -2680,7 +2680,8 @@ map.on('mousemove', function (e) {
 
       <br>
 
-
+    //Barritas aqui!
+    
       <div class="row">
         <div class="col-md-12">
           <div class="container">
