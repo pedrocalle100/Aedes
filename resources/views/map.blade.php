@@ -2535,7 +2535,7 @@ map.addSource('Centro', {
         "source": "pins",
         "layout": {
             "icon-image": "marker-15",
-            "icon-allow-overlap": false
+            "icon-allow-overlap": true
         }
     });
 
@@ -2545,8 +2545,8 @@ map.addSource('Centro', {
       "source": "Paris",
       "layout": {},
       "paint": {
-        "fill-color": "#ffd700",
-        "fill-opacity": 0.8
+        "fill-color": "#FFEB3B",
+        "fill-opacity": 0.55
       }
     });
 
@@ -2556,8 +2556,8 @@ map.addSource('Centro', {
       "source": "La Cumbre",
       "layout": {},
       "paint": {
-        "fill-color": "#33AB28",
-        "fill-opacity": 0.8
+        "fill-color": "#4CAF50",
+        "fill-opacity": 0.55
       }
     });
 
@@ -2567,8 +2567,8 @@ map.addSource('Centro', {
       "source": "Acevedo",
       "layout": {},
       "paint": {
-        "fill-color": "#008000",
-        "fill-opacity": 0.8
+        "fill-color": "#4CAF50",
+        "fill-opacity": 0.55
       }
     });
 
@@ -2578,8 +2578,8 @@ map.addSource('Centro', {
       "source": "Fontidueno",
       "layout": {},
       "paint": {
-        "fill-color": "#ffa500",
-        "fill-opacity": 0.8
+        "fill-color": "#FF9800",
+        "fill-opacity": 0.55
       }
     });
 
@@ -2589,8 +2589,8 @@ map.addSource('Centro', {
       "source": "Madera",
       "layout": {},
       "paint": {
-        "fill-color": "#ffd700",
-        "fill-opacity": 0.8
+        "fill-color": "#FFEB3B",
+        "fill-opacity": 0.55
       }
     });
 
@@ -2600,8 +2600,8 @@ map.addSource('Centro', {
       "source": "Niquia",
       "layout": {},
       "paint": {
-        "fill-color": "#ffd700",
-        "fill-opacity": 0.8
+        "fill-color": "#FFEB3B",
+        "fill-opacity": 0.55
       }
     });
 
@@ -2611,8 +2611,8 @@ map.addSource('Centro', {
       "source": "AltosNiquia",
       "layout": {},
       "paint": {
-        "fill-color": "#ffd700",
-        "fill-opacity": 0.8
+        "fill-color": "#FFEB3B",
+        "fill-opacity": 0.55
       }
     });
 
@@ -2622,8 +2622,8 @@ map.addSource('Centro', {
       "source": "Bellavista",
       "layout": {},
       "paint": {
-        "fill-color": "#ffa500",
-        "fill-opacity": 0.8
+        "fill-color": "#FF9800",
+        "fill-opacity": 0.55
       }
     });
 
@@ -2633,8 +2633,8 @@ map.addSource('Centro', {
       "source": "Centro",
       "layout": {},
       "paint": {
-        "fill-color": "#ff0000",
-        "fill-opacity": 0.8
+        "fill-color": "#F44336",
+        "fill-opacity": 0.55
       }
     });
 
@@ -2644,8 +2644,8 @@ map.addSource('Centro', {
       "source": "SantaAna",
       "layout": {},
       "paint": {
-        "fill-color": "#ff0000",
-        "fill-opacity": 0.8
+        "fill-color": "#F44336",
+        "fill-opacity": 0.55
       }
     });
 });
