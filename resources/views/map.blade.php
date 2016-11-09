@@ -2545,7 +2545,22 @@ map.addSource('Centro', {
       "source": "Paris",
       "layout": {},
       "paint": {
-        "fill-color": "#FFEB3B",
+     <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'PARIS'";
+                      $result = mysqli_query($link, $query);
+
+                      $row = mysqli_fetch_array($result); 
+          
+          if ($row[0] < 60 ){?>
+              "fill-color": "#880011",
+        <?php  
+          }else{?>
+              "fill-color": "#4CAF50",
+        <?php  
+          }
+                ?>
+          
+          
+          
         "fill-opacity": 0.55
       }
     });
