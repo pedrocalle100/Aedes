@@ -1,9 +1,6 @@
 <?php
-
 $link = mysqli_connect("127.0.0.1","cl49-aedes","Bm9W-sc4e","cl49-aedes");
-
 if (mysqli_connect_error()){
-
     die("There was an error connecting to the database");
 }
 ?>
@@ -26,11 +23,44 @@ if (mysqli_connect_error()){
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.css' rel='stylesheet' />
+      
+    <!--jQuery & jQueryUI-->
+      
+    <script type="text/javascript" src="jquery-3.1.0.min.js"></script>  
+      
+    <script src="jquery-ui/jquery-ui.js"></script>  
+      
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">  
 
-      <!--fonts & icons-->
+    <!--fonts & icons-->
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Josefin+Sans|Raleway|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="main/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="main/css/font-awesome/css/font-awesome.css">
+      
+    <!--slider ref -->
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      
+    <style>
+        
+  #custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+    
+        .sliderpos{
+            margin-left: 135px;
+            width: 80%;
+            
+            
+        }    
+        
+  </style>  
+        
   </head>
   <body>
 
@@ -83,20 +113,15 @@ if (mysqli_connect_error()){
     <div id='map'></div>
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGNhbGxlaiIsImEiOiJjaXUyeXVzZncwaHJxMnlvMTQ5aDUydHdnIn0.YUt_W4yQduMhunMDUMkGgw';
-
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/pcallej/ciu4udg6h00cv2ilfny4lp7jw',
       //center: [-77.04, 38.907],
       //zoom: 11.15
     });
-
     map.on('load', function () {
       // Add a GeoJSON source containing place coordinates and information.
-
       //POLIGONOS DE LA COMUNA PARIS
-
-
       map.addSource('Paris', {
         'type': 'geojson',
         'data': {
@@ -264,12 +289,8 @@ if (mysqli_connect_error()){
           }
         }
       });
-
-
 // FINAL DE POLIGONOS DE LA COMUNA PARIS
-
 //POLIGONOS DE LA COMUNA MADERA
-
 map.addSource('Madera', {
   'type': 'geojson',
   'data': {
@@ -439,12 +460,8 @@ map.addSource('Madera', {
     }
   }
 });
-
 //FINAL DE POLIGONOS DE LA COMUNA MADERA
-
-
 //POLIGONOS DE LA COMUNA ACEVEDO
-
 map.addSource('Acevedo', {
   'type': 'geojson',
   'data': {
@@ -627,12 +644,8 @@ map.addSource('Acevedo', {
     }
   }
 });
-
 //FINAL DE POLIGONOS DE LA COMUNA ACEVEDO
-
-
 //POLIGONOS DE LA COMUNA FONTIDUEÑO
-
 map.addSource('Fontidueno', {
   'type': 'geojson',
   'data': {
@@ -797,12 +810,8 @@ map.addSource('Fontidueno', {
     }
   }
 });
-
 //FINAL DE POLIGONOS DE LA COMUNA FONTIDUEÑO
-
-
 //POLIGONOS DE LA COMUNA NIQUIA
-
 map.addSource('Niquia', {
   'type': 'geojson',
   'data': {
@@ -1191,11 +1200,8 @@ map.addSource('Niquia', {
     }
   }
 });
-
 //FINAL DE POLIGONOS DE LA COMUNA NIQUIA
-
 //POLIGONOS DE LA COMUNA ALTOS DE NIQUIA
-
 map.addSource('AltosNiquia', {
   'type': 'geojson',
   'data': {
@@ -1367,11 +1373,8 @@ map.addSource('AltosNiquia', {
     }
   }
 });
-
 //FINAL DE POLIGONOS DE LA COMUNA ALTOS NIQUIA
-
 //POLIGONOS DE LA COMUNA LA CUMBRE
-
 map.addSource('La Cumbre', {
   'type': 'geojson',
   'data': {
@@ -1680,11 +1683,8 @@ map.addSource('La Cumbre', {
     }
   }
 });
-
 //FINAL DE POLIGONOS DE LA COMUNA NIQUIA
-
 //POLIGONOS DE LA COMUNA BELLAVISTA
-
 map.addSource('Bellavista', {
   'type': 'geojson',
   'data': {
@@ -1897,11 +1897,8 @@ map.addSource('Bellavista', {
     }
   }
 });
-
 //FINAL DE POLIGONOS DE LA COMUNA BELLAVISTA
-
 //POLIGONOSD E LA COMUNA SANTA ANA
-
 map.addSource('SantaAna', {
   'type': 'geojson',
   'data': {
@@ -2120,11 +2117,8 @@ map.addSource('SantaAna', {
     }
   }
 });
-
 //FINAL DE POLIGONSO DE LA COMUNA SANTA ANA
-
 //POLIGONOS DE LA COMUNA CENTRO
-
 map.addSource('Centro', {
   'type': 'geojson',
   'data': {
@@ -2308,10 +2302,7 @@ map.addSource('Centro', {
     }
   }
 });
-
 //FINAL DE POLIGONOS DE LA COMUNA CENTRO
-
-
       map.addSource("pins", {
           "type": "geojson",
           "data": {
@@ -2320,13 +2311,13 @@ map.addSource('Centro', {
                 {
                   "type": "Feature",
                   "properties": {
-                    "description": "<strong>Nombre: </stong><strong>Paris</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'PARIS'";
+                    "description": "<strong>Nombre: </strong><strong>Paris</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'PARIS' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."' 
+         AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                      
+                      
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
                     "icon": "marker-15"
                   },
@@ -2339,16 +2330,11 @@ map.addSource('Centro', {
                   "type": "Feature",
                   "properties": {
                     "description": "<strong>Acevedo</strong>",
-
                     "description": "<strong>Acevedo</strong><br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'ACEVEDO'";
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
-
                     "icon": "marker-15"
                   },
                   "geometry": {
@@ -2361,11 +2347,8 @@ map.addSource('Centro', {
                   "properties": {
                     "description": "<strong>Madera</strong><br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'MADERA'";
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
                     "icon": "marker-15"
                   },
@@ -2379,11 +2362,8 @@ map.addSource('Centro', {
                   "properties": {
                     "description": "<strong>Santa Ana</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'SANTA ANA'";
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
                     "icon": "marker-15"
                   },
@@ -2397,11 +2377,8 @@ map.addSource('Centro', {
                   "properties": {
                     "description": "<strong>Centro</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'CENTRO'";
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
                     "icon": "marker-15"
                   },
@@ -2415,11 +2392,8 @@ map.addSource('Centro', {
                   "properties": {
                     "description": "<strong>La Cumbre</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'LA CUMBRE'";
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
                     "icon": "marker-15"
                   },
@@ -2433,11 +2407,8 @@ map.addSource('Centro', {
                   "properties": {
                     "description": "<strong>Bellavista</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'BELLAVISTA'";
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
                     "icon": "marker-15"
                   },
@@ -2451,11 +2422,8 @@ map.addSource('Centro', {
                   "properties": {
                     "description": "<strong>Altos de Niquía</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'ALTOS DE NIQUIA'";
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
                     "icon": "marker-15"
                   },
@@ -2469,11 +2437,8 @@ map.addSource('Centro', {
                   "properties": {
                     "description": "<strong>Niquía</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'NIQUIA'";
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
                     "icon": "marker-15"
                   },
@@ -2487,11 +2452,8 @@ map.addSource('Centro', {
                   "properties": {
                     "description": "<strong>Fontidueño</strong> <br> <p>Numero de casos: <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'FONTIDUENO'";
                       $result = mysqli_query($link, $query);
-
                       $row = mysqli_fetch_array($result);
-
                    echo $row[0];
-
                     ?></p>",
                     "icon": "marker-15"
                   },
@@ -2500,7 +2462,6 @@ map.addSource('Centro', {
                     "type": "Point"
                   }
                 },
-
                 {
                   "type": "Feature",
                   "properties": {
@@ -2515,19 +2476,6 @@ map.addSource('Centro', {
             ]
         }
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
     // Add a layer showing the places.
     map.addLayer({
         "id": "pins",
@@ -2538,33 +2486,34 @@ map.addSource('Centro', {
             "icon-allow-overlap": true
         }
     });
-
     map.addLayer({
       "id": "Paris",
       "type": "fill",
       "source": "Paris",
       "layout": {},
       "paint": {
-     <?php $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'PARIS'";
-                      $result = mysqli_query($link, $query);
-
-                      $row = mysqli_fetch_array($result); 
           
-          if ($row[0] < 60 ){?>
+          
+   
+          <?php
+          
+         $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'PARIS' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."' 
+         AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                      
+                      
+                      $result = mysqli_query($link, $query);
+                      $row = mysqli_fetch_array($result);
+          
+               
+               if ($row[0] > 15 ){?>
               "fill-color": "#880011",
         <?php  
           }else{?>
-              "fill-color": "#4CAF50",
-        <?php  
-          }
-                ?>
-          
-          
-          
+              "fill-color": "#33eeff",
+     <?php  } ?>
         "fill-opacity": 0.55
       }
     });
-
     map.addLayer({
       "id": "La Cumbre",
       "type": "fill",
@@ -2575,7 +2524,6 @@ map.addSource('Centro', {
         "fill-opacity": 0.55
       }
     });
-
     map.addLayer({
       "id": "Acevedo",
       "type": "fill",
@@ -2586,7 +2534,6 @@ map.addSource('Centro', {
         "fill-opacity": 0.55
       }
     });
-
     map.addLayer({
       "id": "Fontidueno",
       "type": "fill",
@@ -2597,7 +2544,6 @@ map.addSource('Centro', {
         "fill-opacity": 0.55
       }
     });
-
     map.addLayer({
       "id": "Madera",
       "type": "fill",
@@ -2608,7 +2554,6 @@ map.addSource('Centro', {
         "fill-opacity": 0.55
       }
     });
-
     map.addLayer({
       "id": "Niquia",
       "type": "fill",
@@ -2619,7 +2564,6 @@ map.addSource('Centro', {
         "fill-opacity": 0.55
       }
     });
-
     map.addLayer({
       "id": "AltosNiquia",
       "type": "fill",
@@ -2630,7 +2574,6 @@ map.addSource('Centro', {
         "fill-opacity": 0.55
       }
     });
-
     map.addLayer({
       "id": "Bellavista",
       "type": "fill",
@@ -2641,7 +2584,6 @@ map.addSource('Centro', {
         "fill-opacity": 0.55
       }
     });
-
     map.addLayer({
       "id": "Centro",
       "type": "fill",
@@ -2652,7 +2594,6 @@ map.addSource('Centro', {
         "fill-opacity": 0.55
       }
     });
-
     map.addLayer({
       "id": "SantaAna",
       "type": "fill",
@@ -2664,19 +2605,14 @@ map.addSource('Centro', {
       }
     });
 });
-
-
 // When a click event occurs near a place, open a popup at the location of
 // the feature, with description HTML from its properties.
 map.on('click', function (e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['pins'] });
-
     if (!features.length) {
         return;
     }
-
     var feature = features[0];
-
     // Populate the popup and set its coordinates
     // based on the feature found.
     var popup = new mapboxgl.Popup()
@@ -2684,7 +2620,6 @@ map.on('click', function (e) {
         .setHTML(feature.properties.description)
         .addTo(map);
 });
-
 // Use the same approach as above to indicate that the symbols are clickable
 // by changing the cursor style to 'pointer'.
 map.on('mousemove', function (e) {
@@ -2694,9 +2629,91 @@ map.on('mousemove', function (e) {
 </script>
 
       <br>
-
-    //Barritas aqui!
+<div class="sliderpos">
+<!-- Slider -->    
+<div id="slider">
+<div id="custom-handle" class="ui-slider-handle"></div>
+</div>
+    </div>
+<br>
+<br>
     
+<!-- Formulario -->
+<form method="post" id="formulario">
+       
+             <div class="row">
+                <div class="col-xs-3">
+                    
+                    <label for="Ano">Año: </label>
+        
+                    <select name="Ano">
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                            
+                    </select>
+                  
+                </div>
+                 
+            </div>
+        
+  
+            <br>
+            <br>
+   
+             <div class="row">
+                <div class="col-xs-3">
+                        
+                    <input type="hidden" name="Semana"/>
+                    
+                </div>
+                 
+            </div>
+        
+      
+    
+        <button type="submit" id="submit" class="btn btn-primary">Go!</button>
+   </form>
+    
+    <!-- Slider Script -->
+      <script type="text/javascript">
+    
+    $(function() {    
+            var handle = $( "#custom-handle" ); 
+            
+
+            $( "#slider" ).slider({
+                min: 1,
+                max: 54,
+                value: 1,
+                step: 1,
+                
+                  create: function(event, ui) {
+                      
+                        handle.text( $( this ).slider( "value" ) );  
+                  },
+
+                  slide: function( event, ui ) {
+                        handle.text( ui.value );
+                  },
+
+                  change: function(event, ui){
+                        var valor = ui.value;
+                        $("#formulario input[name='Semana']").val( ui.value );
+                        
+            }
+        });
+    });
+    </script> 
+        
+  
+    <!-- Instructions -->
       <div class="row">
         <div class="col-md-12">
           <div class="container">
