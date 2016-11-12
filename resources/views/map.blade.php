@@ -2516,12 +2516,20 @@ map.addSource('Centro', {
           AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
                     $result = mysqli_query($link, $query);
                     $row = mysqli_fetch_array($result);
-               if ($row[0] > 15 ){?>
-              "fill-color": "#880011",
+               if ($row[0] == 0 ){?>
+              "fill-color": "#68ff33",
         <?php
-          }else{?>
-              "fill-color": "#33eeff",
-     <?php  } ?>
+      }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+              "fill-color": "#fcff33",
+      <?php
+      }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+              "fill-color": "#ffa533",
+      <?php
+      }elseif ($row[0] > 5) {?>
+            "fill-color": "#ff3333",
+      <?php }else {?>
+            "fill-color": "33e6ff",
+      <?php } ?>
         "fill-opacity": 0.55
       }
     });
@@ -2531,7 +2539,28 @@ map.addSource('Centro', {
       "source": "La Cumbre",
       "layout": {},
       "paint": {
-        "fill-color": "#4CAF50",
+
+        <?php
+
+        $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'CUMBRE' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."'
+        AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                  $result = mysqli_query($link, $query);
+                  $row = mysqli_fetch_array($result);
+             if ($row[0] == 0 ){?>
+            "fill-color": "#68ff33",
+        <?php
+        }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+            "fill-color": "#fcff33",
+        <?php
+        }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+            "fill-color": "#ffa533",
+        <?php
+        }elseif ($row[0] > 5) {?>
+          "fill-color": "#ff3333",
+        <?php }else {?>
+          "fill-color": "33e6ff",
+        <?php } ?>
+
         "fill-opacity": 0.55
       }
     });
@@ -2541,7 +2570,28 @@ map.addSource('Centro', {
       "source": "Acevedo",
       "layout": {},
       "paint": {
-        "fill-color": "#4CAF50",
+
+        <?php
+
+        $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'ACEVEDO' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."'
+        AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                  $result = mysqli_query($link, $query);
+                  $row = mysqli_fetch_array($result);
+             if ($row[0] == 0 ){?>
+            "fill-color": "#68ff33",
+      <?php
+    }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+            "fill-color": "#fcff33",
+    <?php
+    }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+            "fill-color": "#ffa533",
+    <?php
+    }elseif ($row[0] > 5) {?>
+          "fill-color": "#ff3333",
+    <?php }else {?>
+          "fill-color": "33e6ff",
+    <?php } ?>
+
         "fill-opacity": 0.55
       }
     });
@@ -2551,7 +2601,28 @@ map.addSource('Centro', {
       "source": "Fontidueno",
       "layout": {},
       "paint": {
-        "fill-color": "#FF9800",
+
+        <?php
+
+        $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'FONTIDUENO' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."'
+        AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                  $result = mysqli_query($link, $query);
+                  $row = mysqli_fetch_array($result);
+             if ($row[0] == 0 ){?>
+            "fill-color": "#68ff33",
+      <?php
+    }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+            "fill-color": "#fcff33",
+    <?php
+    }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+            "fill-color": "#ffa533",
+    <?php
+    }elseif ($row[0] > 5) {?>
+          "fill-color": "#ff3333",
+    <?php }else {?>
+          "fill-color": "33e6ff",
+    <?php } ?>
+
         "fill-opacity": 0.55
       }
     });
@@ -2561,7 +2632,28 @@ map.addSource('Centro', {
       "source": "Madera",
       "layout": {},
       "paint": {
-        "fill-color": "#FFEB3B",
+
+        <?php
+
+        $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'MADERA' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."'
+        AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                  $result = mysqli_query($link, $query);
+                  $row = mysqli_fetch_array($result);
+             if ($row[0] == 0 ){?>
+            "fill-color": "#68ff33",
+      <?php
+    }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+            "fill-color": "#fcff33",
+    <?php
+    }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+            "fill-color": "#ffa533",
+    <?php
+    }elseif ($row[0] > 5) {?>
+          "fill-color": "#ff3333",
+    <?php }else {?>
+          "fill-color": "33e6ff",
+    <?php } ?>
+
         "fill-opacity": 0.55
       }
     });
@@ -2571,7 +2663,28 @@ map.addSource('Centro', {
       "source": "Niquia",
       "layout": {},
       "paint": {
-        "fill-color": "#FFEB3B",
+
+        <?php
+
+        $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'NIQUIA' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."'
+        AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                  $result = mysqli_query($link, $query);
+                  $row = mysqli_fetch_array($result);
+             if ($row[0] == 0 ){?>
+            "fill-color": "#68ff33",
+      <?php
+    }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+            "fill-color": "#fcff33",
+    <?php
+    }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+            "fill-color": "#ffa533",
+    <?php
+    }elseif ($row[0] > 5) {?>
+          "fill-color": "#ff3333",
+    <?php }else {?>
+          "fill-color": "33e6ff",
+    <?php } ?>
+
         "fill-opacity": 0.55
       }
     });
@@ -2581,7 +2694,28 @@ map.addSource('Centro', {
       "source": "AltosNiquia",
       "layout": {},
       "paint": {
-        "fill-color": "#FFEB3B",
+
+        <?php
+
+        $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'ALTOS DE NIQUIA' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."'
+        AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                  $result = mysqli_query($link, $query);
+                  $row = mysqli_fetch_array($result);
+             if ($row[0] == 0 ){?>
+            "fill-color": "#68ff33",
+      <?php
+    }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+            "fill-color": "#fcff33",
+    <?php
+    }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+            "fill-color": "#ffa533",
+    <?php
+    }elseif ($row[0] > 5) {?>
+          "fill-color": "#ff3333",
+    <?php }else {?>
+          "fill-color": "33e6ff",
+    <?php } ?>
+
         "fill-opacity": 0.55
       }
     });
@@ -2591,7 +2725,28 @@ map.addSource('Centro', {
       "source": "Bellavista",
       "layout": {},
       "paint": {
-        "fill-color": "#FF9800",
+
+        <?php
+
+        $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'BELLAVISTA' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."'
+        AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                  $result = mysqli_query($link, $query);
+                  $row = mysqli_fetch_array($result);
+             if ($row[0] == 0 ){?>
+            "fill-color": "#68ff33",
+      <?php
+    }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+            "fill-color": "#fcff33",
+    <?php
+    }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+            "fill-color": "#ffa533",
+    <?php
+    }elseif ($row[0] > 5) {?>
+          "fill-color": "#ff3333",
+    <?php }else {?>
+          "fill-color": "33e6ff",
+    <?php } ?>
+
         "fill-opacity": 0.55
       }
     });
@@ -2601,7 +2756,28 @@ map.addSource('Centro', {
       "source": "Centro",
       "layout": {},
       "paint": {
-        "fill-color": "#F44336",
+        <?php
+
+        $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'CENTRO' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."'
+        AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                  $result = mysqli_query($link, $query);
+                  $row = mysqli_fetch_array($result);
+             if ($row[0] == 0 ){?>
+            "fill-color": "#68ff33",
+      <?php
+    }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+            "fill-color": "#fcff33",
+    <?php
+    }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+            "fill-color": "#ffa533",
+    <?php
+    }elseif ($row[0] > 5) {?>
+          "fill-color": "#ff3333",
+    <?php }else {?>
+          "fill-color": "33e6ff",
+    <?php } ?>
+
+
         "fill-opacity": 0.55
       }
     });
@@ -2611,7 +2787,28 @@ map.addSource('Centro', {
       "source": "SantaAna",
       "layout": {},
       "paint": {
-        "fill-color": "#F44336",//cambiar color
+
+        <?php
+
+        $query = "SELECT count(idcaso) FROM `mapa` WHERE comuna = 'SANTA ANA' AND semana = '".mysqli_real_escape_string($link, $_POST["Semana"])."'
+        AND ano ='".mysqli_real_escape_string($link, $_POST["Ano"])."'";
+                  $result = mysqli_query($link, $query);
+                  $row = mysqli_fetch_array($result);
+             if ($row[0] == 0 ){?>
+            "fill-color": "#68ff33",
+      <?php
+    }elseif ($row[0] > 0 && $row[0] <= 2){ ?>
+            "fill-color": "#fcff33",
+    <?php
+    }elseif ($row[0] > 2 && $row[0] <= 5) {?>
+            "fill-color": "#ffa533",
+    <?php
+    }elseif ($row[0] > 5) {?>
+          "fill-color": "#ff3333",
+    <?php }else {?>
+          "fill-color": "33e6ff",
+    <?php } ?>
+
         "fill-opacity": 0.55
       }
     });
