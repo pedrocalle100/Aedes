@@ -2883,11 +2883,14 @@ map.on('mousemove', function (e) {
                 </div>
 
             </div>
-
-
-
         <button type="submit" id="submit" class="btn btn-primary">Go!</button>
    </form>
+
+
+   <div class="results">
+     año: <?php echo $_POST['Ano']; ?>
+     semana: <?php echo $_POST['Semana']; ?>
+   </div>
 
     <!-- Slider Script -->
       <script type="text/javascript">
