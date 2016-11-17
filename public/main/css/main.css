@@ -8,7 +8,6 @@ body {
   background-image: -o-radial-gradient(top, circle cover, #9de6dd, #427388 80%);
   background-image: radial-gradient(top, circle cover, #9de6dd, #427388 80%);
 }
-
 body{
   padding-top: 50px;
   color: #78909C;

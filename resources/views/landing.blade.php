@@ -58,7 +58,7 @@
                 <div class="container" id="containerSignup">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" class="signUpButton">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="map" class="signUpButton">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                        <li><a href="http://176.32.230.27/chili-sys.com/Aedes/map.blade.php" class="signUpButton">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
                 <!-- End of Container Signup -->
