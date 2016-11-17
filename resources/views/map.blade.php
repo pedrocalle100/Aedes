@@ -3,10 +3,6 @@ $link = mysqli_connect("127.0.0.1","cl49-aedes","Bm9W-sc4e","cl49-aedes");
 if (mysqli_connect_error()){
     die("There was an error connecting to the database");
 }
-session_start();
-
-echo $_SESSION['usuario'];
-
 if(isset($_POST['Ano'])){
   }else{
   $_POST['Ano'] = 2016;
@@ -104,6 +100,15 @@ if(isset($_POST['Ano'])){
         <div class="row">
           <div class="container">
             <h1 class="title"> Information map</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="containerButtonImport">
+            <a href="http://176.32.230.27/chili-sys.com/Aedes/import.blade.php">
+              <button id="buttonImport" class="btn btn-success">
+                <h4 class="title">Import file <i class="fa fa-upload" aria-hidden="true"></i></h4>
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -2869,7 +2874,7 @@ map.on('mousemove', function (e) {
                     <div class="row">
                       <div class="col-md-12">
                         <div class="containerButtonGo">
-                          <button type="submit" id="submit" class="btn btn-primary"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                          <button type="submit" id="submit" class="btn btn-success"><i class="fa fa-refresh" aria-hidden="true"></i></button>
                         </div>
                       </div>
                     </div>
@@ -2926,8 +2931,8 @@ map.on('mousemove', function (e) {
   <div class="col-md-12">
     <div class="containerResults">
       <div class="results">
-        <h4 class="title">año: <?php echo $_POST['Ano']; ?></h4>
-        <h4 class="title">semana: <?php echo $_POST['Semana']; ?></h4>
+        <h4 class="title">Año: <?php echo $_POST['Ano']; ?></h4>
+        <h4 class="title">Semana: <?php echo $_POST['Semana']; ?></h4>
       </div>
     </div>
   </div>
