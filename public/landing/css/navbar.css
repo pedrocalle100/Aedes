@@ -10,3 +10,24 @@
     font-size: 25px;
     color: #ffffff;
 }
+
+.labellogin{
+    color:rgb(255, 255, 255);
+    font-family: 'Raleway', serif;
+    
+}
+
+#invisible{
+    display: none;
+    visibility: hidden;
+}
+
+#signinButton{
+    margin-top: 19px;
+    margin-left: 2px;
+}
+
+#recordarmeCheckBox{
+    margin-top: 40px;
+    margin-left: 2px;
+}

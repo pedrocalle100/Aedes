@@ -1,4 +1,72 @@
 <!DOCTYPE html>
+<?php
+
+session_start();
+
+$link = mysqli_connect("127.0.0.1","cl49-aedes","Bm9W-sc4e","cl49-aedes");
+if (mysqli_connect_error()){
+    die("There was an error connecting to the database");
+}
+      $error = "";
+    if(array_key_exists("submit-button", $_POST)){
+       
+       
+
+    if ( !$_POST['usuario']){
+        $error .= "<script type='text/javascript'>alert('Favor ingrese un Usuario');</script>;";
+        
+    }
+    
+    if( !$_POST['password']){
+        
+        $error .= "<script type='text/javascript'>alert('Favor ingrese una Contraseña');</script>;";
+          
+      }
+        
+    if ($error != ""){
+            $error = "<p>Hay error(es) en el formulario:</p>".$error;
+            
+        }else{
+            
+              $query= "SELECT * FROM `users` WHERE name ='".mysqli_real_escape_string($link, $_POST['usuario'])."'";
+        
+                $result = mysqli_query($link, $query);
+        
+                $row = mysqli_fetch_array($result);
+        
+                if (isset($row)){
+                    
+                    $passw = $_POST['password'];
+                    
+                        if($passw == $row['pwd']){
+                            $_SESSION['id'] = $row['id'];
+                            
+                            if ($_POST['PermanecerRegistrado'] == '1'){
+                                
+                                setcookie("id", $row['id'], time() + 60*60*24*7);
+                            }
+                            
+                            header("Location: map.blade.php");
+                            
+                        }else{
+                            $error .= "<script type='text/javascript'>alert('Usuario y/o Contraseña Inválido(s)');</script>;";
+                        }
+                }else{
+                    $error .= "<script type='text/javascript'>alert('Usuario y/o Contraseña Inválido(s)');</script>;";
+                }
+        
+                
+    }
+                
+                
+
+                    
+}
+
+?>
+
+<meta charset="utf-8">
+
 <html class="no-js" lang="">
 <!--<![endif]-->
 
@@ -44,6 +112,7 @@
         <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
+                    
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -54,11 +123,28 @@
                         <a class="navbar-brand" href="#" id="AedesBrand">Aedes</a>
                     </div>
                 </div>
+                
+                    
                 <!-- Container Sign Up -->
                 <div class="container" id="containerSignup">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="signUpButton">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="http://176.32.230.27/chili-sys.com/Aedes/map.blade.php" class="signUpButton">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                        <li><form method="post"> 
+                        <p class="labellogin">Usuario</p>
+                        <input type="text" name="usuario" placeholder="usuario"></li>
+                    
+                        <li><p class="labellogin">Contraseña</p>
+                    <input type="password" name="password" placeholder="contraseña"></li>  
+                        
+                         <li><button class="btn btn-success" id="signinButton" type="submit" name="submit-button" value="Ingresar">LogIn</button></li>
+                        
+                        <li> <input type="checkbox" name = "PermanecerRegistrado" value=1 id="recordarmeCheckBox">Recordarme</li>
+            
+                       
+                        
+                        <li id="invisible"><div id="error"> <?php echo $error; ?> </div></li>
+                        
+                        </form>
+                        
                     </ul>
                 </div>
                 <!-- End of Container Signup -->
@@ -66,7 +152,13 @@
             </div>
         </nav>
         <!-- End of Navbar -->
+<div id="login-form">
 
+    
+   
+    
+
+</div>
         <!-- Main jumbotron  -->
         <div class="jumbotron">
             <!-- Container Jumbotron -->
